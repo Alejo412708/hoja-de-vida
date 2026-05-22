@@ -2,44 +2,155 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Hoja de Vida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Luis Ochoa</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f2f2f2;
+        }
+
+        /* ENCABEZADO */
+        header{
+            background:#1e3a8a;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        /* CONTENEDOR GENERAL */
+        .container{
+            width:90%;
+            margin:auto;
+        }
+
+        /* GRID INFO */
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:20px;
+            margin-top:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* TABLA */
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            margin-top:10px;
+        }
+
+        th{
+            background:#1e3a8a;
+            color:white;
+            padding:12px;
+        }
+
+        td{
+            border:1px solid #ccc;
+            padding:12px;
+            text-align:center;
+        }
+
+        tr:hover{
+            background:#e0f2fe;
+        }
+
+        /* BOTONES / LINKS */
+        a{
+            color:#1e3a8a;
+            font-weight:bold;
+            text-decoration:none;
+        }
+
+        a:hover{
+            color:red;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:600px){
+            .grid{
+                grid-template-columns:1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div>
-    <h1>Hoja de Vida</h1>
-</div>
+<header>
+    <h1>HOJA DE VIDA</h1>
+    <p>Luis Alejandro Ochoa Acevedo</p>
+</header>
 
-<div>
-    <h2>Datos personales</h2>
-    <p><strong>Nombre:</strong> Luis Alejandro Ochoa Acevedo</p>
-    <p><strong>Edad:</strong> 19 años</p>
-</div>
+<div class="container">
 
-<div>
-    <h2>Formación académica</h2>
-    <p>Colegio: Nuestra Señora del Rosario</p>
-    <p>Estudiante de Ingeniería de Sistemas - UFPS Ocaña</p>
-</div>
+    <!-- GRID DE INFORMACIÓN -->
+    <div class="grid">
 
-<div>
-    <h2>Perfil</h2>
-    <p>
-        Soy estudiante de Ingeniería de Sistemas con interés en el desarrollo web,
-        programación y el aprendizaje de nuevas tecnologías.
-    </p>
-</div>
+        <div class="card">
+            <h2>Datos Personales</h2>
+            <p><strong>Nombre:</strong> Luis Alejandro Ochoa Acevedo</p>
+            <p><strong>Edad:</strong> 19 años</p>
+            <p><strong>Ciudad:</strong> Colombia</p>
+        </div>
 
-<div>
-    <h2>Enlaces</h2>
-    <p>
-        <a href="https://www.ufpso.edu.co" target="_blank">UFPS Ocaña</a>
-    </p>
+        <div class="card">
+            <h2>Perfil</h2>
+            <p>
+                Estudiante de Ingeniería de Sistemas con interés en desarrollo web,
+                programación y aprendizaje de nuevas tecnologías.
+            </p>
+        </div>
 
-    <p>
-        Instagram: <strong>@alejoocho1</strong>
-    </p>
+    </div>
+
+    <!-- TABLA ACADÉMICA -->
+    <div class="card" style="margin-top:20px;">
+        <h2>Formación Académica</h2>
+
+        <table>
+            <tr>
+                <th>Institución</th>
+                <th>Descripción</th>
+            </tr>
+
+            <tr>
+                <td>Nuestra Señora del Rosario</td>
+                <td>Bachiller académico</td>
+            </tr>
+
+            <tr>
+                <td>UFPS Ocaña</td>
+                <td>Ingeniería de Sistemas (En curso)</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ENLACES -->
+    <div class="card" style="margin-top:20px; text-align:center;">
+        <h2>Enlaces</h2>
+
+        <p>
+            <a href="https://www.ufpso.edu.co" target="_blank">
+                Universidad UFPS Ocaña
+            </a>
+        </p>
+
+        <p>
+            Instagram: <strong>@alejoocho1</strong>
+        </p>
+    </div>
+
 </div>
 
 </body>
